@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+
+}
+
+/* Utility */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar -------------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar ul li a {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+/* Active navbar */
+.navbar.active {
+    background: #fff;
+}
+
+.navbar.active a {
+    color: #000;
+}
+
+.navbar.active .container {
+    padding: 10px 0;
+}
+
+/* Current */
+.navbar a:hover,
+.navbar a.current {
+    color: #e84118;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Hero -------------------- */
+#hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 9);
+    text-align: center;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("clement-helardot.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.5;
+}
+
+#hero * {
+    z-index: 10;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+}
+
+
+/* Content  -------------------- */
+#content {
+    padding: 3rem;
+}
+
+.content-box {
+    margin-bottom: 2.5rem;
+}
+
+.content-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.content-box p {
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
